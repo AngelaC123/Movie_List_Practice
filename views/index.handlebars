@@ -16,19 +16,20 @@
   </div>
   <!-- movie list -->
   <div class="row" id="data-panel">
+
+    {{#each movie}}
     <div class="col-sm-3">
-      <a href="/1" class="text-secondary">
+      <a href="/movies/{{this.id}}" class="text-secondary">
         <div class="card mb-2">
-          <img class="card-img-top" src="https://movie-list.alphacamp.io/posters/c9XxwwhPHdaImA2f1WEfEsbhaFB.jpg"
-            alt="Card image cap">
+          <img class="card-img-top" src="https://movie-list.alphacamp.io/posters/{{this.image}}" alt="Card image cap">
           <div class="card-body movie-item-body">
-            <h6 class="card-title">Jurassic World: Fallen Kingdom</h6>
+            <h6 class="card-title">{{this.title}}</h6>
           </div>
         </div>
       </a>
     </div>
-
-    <div class="col-sm-3">
+    {{/each}}
+    {{!-- <div class="col-sm-3">
       <a href="/2" class="text-secondary">
         <div class="card mb-2">
           <img class="card-img-top" src="https://movie-list.alphacamp.io/posters/rv1AWImgx386ULjcf62VYaW8zSt.jpg"
@@ -110,6 +111,8 @@
           </div>
         </div>
       </a>
-    </div>
+    </div> --}}
+
+
   </div>
 </div>
